@@ -8,7 +8,7 @@
 
 <div class="post-list__container">
   <ul class="post-list">
-    {{ range where .Pages "Params.language" "en" }}
+    {{ range .Pages }}
     <li class="post">
       <div class="post__header">
         <time class="post__date" datetime="{{ .Date }}"
