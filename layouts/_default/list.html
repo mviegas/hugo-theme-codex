@@ -4,11 +4,11 @@
 
 {{ define "main" }}
     
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}    
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}
 
 <div class="post-list__container">
   <ul class="post-list">
-    {{ range .Pages }}
+    {{ range where .Pages "Params.language" "en" }}
     <li class="post">
       <div class="post__header">
         <time class="post__date" datetime="{{ .Date }}"
